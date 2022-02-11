@@ -8,8 +8,8 @@
 #include <iostream>
 #include <string>
 #include <iomanip>
-/*
 
+/*
 int main()
 {
 	using std::cout;
@@ -136,7 +136,7 @@ int main()
 // 2/4/22
 // Grid.cpp
 
-/* int main() {
+ /*int main() {
 
 	using namespace std;
 
@@ -147,7 +147,7 @@ int main()
 	while (i >= 0) {
 
 
-		cout << "Please Enter Rows and Columns to Generate a field";
+		cout << "\n Please Enter Rows and Columns to Generate a field\n";
 
 		cin >> rows >> columns;
 
@@ -168,7 +168,7 @@ int main()
 			cout << " . ";
 		}
 
-		if (rows < 0 || columns < 0) {
+		if (rows <= 0 || columns <= 0) {
 			break;
 		}
 
