@@ -36,12 +36,9 @@ void PrintNames(vector<string> & names) {
 
 }
 
-
 int main() {
 
 	vector<string> vectorCopy;
-
-	PrintNames(vectorCopy);
 
 	
 	
