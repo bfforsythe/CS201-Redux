@@ -33,6 +33,22 @@ int main() {
 
 	// Name Search
 
+	cout << "Please enter a name to search for: ";
+	string searchedName;
+	getline(cin, searchedName);
+	bool isNameHere = false;
 
+	for (int parse = 0; parse < vectorCopy.size(); parse++) {
 
+		if (searchedName == vectorCopy.at(parse)) {
+			cout << "Your query exists";
+			isNameHere = true;
+			parse = vectorCopy.size();
+		}
+
+	}
+
+	if (isNameHere == false) {
+		cout << "Your query does not exist";
+	}
 }
