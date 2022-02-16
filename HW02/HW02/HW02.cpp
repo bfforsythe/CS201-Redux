@@ -21,39 +21,54 @@ void InputNames(vector<string>& names) {
 
 }
 
+void PrintNames(vector<string> & names) {
+
+	vector<string> listCopy;
+
+	InputNames(listCopy);
+
+	cout << "Your List Is: ";
+
+	for (int i = 0; i < listCopy.size(); i++) {
+		std::cout << listCopy.at(i) << " ";
+
+	}
+
+}
+
 
 int main() {
 
 	vector<string> vectorCopy;
 
-	InputNames(vectorCopy);
-
-	/*	for (int i = 0; i < vectorCopy.size(); i++) {
-		cout << vectorCopy[i];
-		cout << " ";
-	} */
+	PrintNames(vectorCopy);
 
 	
 	
 	
-	// Name Search
 
-	cout << "Please enter a name to search for: ";
-	string searchedName;
-	getline(cin, searchedName);
-	bool isNameHere = false;
-
-	for (int parse = 0; parse < vectorCopy.size(); parse++) {
-
-		if (searchedName == vectorCopy.at(parse)) {
-			cout << "Your query exists";
-			isNameHere = true;
-			parse = vectorCopy.size();
-		}
-
-	}
-
-	if (isNameHere == false) {
-		cout << "Your query does not exist";
-	}
 }
+
+
+
+
+// Name Search
+
+/*cout << "Please enter a name to search for: ";
+string searchedName;
+getline(cin, searchedName);
+bool isNameHere = false;
+
+for (int parse = 0; parse < vectorCopy.size(); parse++) {
+
+	if (searchedName == vectorCopy.at(parse)) {
+		cout << "Your query exists";
+		isNameHere = true;
+		parse = vectorCopy.size();
+	}
+
+}
+
+if (isNameHere == false) {
+	cout << "Your query does not exist";
+} */
