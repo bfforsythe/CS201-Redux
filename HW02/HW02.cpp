@@ -14,6 +14,7 @@ void InputNames(vector<string>& names) {
 		getline(cin, name);
 		names.push_back(name);
 
+
 	}
 
 }
