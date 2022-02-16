@@ -6,6 +6,8 @@
 using namespace std;
 
 
+// InputNames creates a vecotr of length ten to be used later.
+
 void InputNames(vector<string>& names) {
 
 	for (int i = 0; i < 10; i++) {
@@ -31,6 +33,9 @@ int main() {
 		cout << " ";
 	} */
 
+	
+	
+	
 	// Name Search
 
 	cout << "Please enter a name to search for: ";
