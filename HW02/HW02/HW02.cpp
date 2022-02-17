@@ -145,7 +145,47 @@ int main() {
 } */
 
 
+
+
+
+
+
+
+
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 // Brandon Forsythe
 // CS201 Redux HW02 A2
+// 2/13/22
+// rice.cpp
+
+/*void riceCounter(int chessSquares) {
+
+	int grain = 1;
+
+	cout << "! 1000 Grains is given after 11 squares ! \n ";
+	cout << "! 1,000,000 Grains is given after 20 squares ! \n";
+	cout << "! 1,000,000,000 Grains is given after 30 squares ! \n\n";
+	cout << " 30 Squares also happens to be the highest number you can achieve before the program explodes, due to memory limits\n";
+
+	cout << "Your squares work out to be \n";
+
+	for (int i = 0; i <= chessSquares; i++) {
+
+		cout << grain << " : " << i << " squares\n";
+
+		grain = grain*2;
+
+		
+
+		
+	}
+	
+}
+
+int main() {
+
+	riceCounter(40);
+
+
+}*/
