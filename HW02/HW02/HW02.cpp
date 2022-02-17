@@ -1,3 +1,9 @@
+// Brandon Forsythe
+// CS201 Redux HW02
+// 2/10/22
+// Fits the Parameters of HW02
+
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -6,7 +12,7 @@
 using namespace std;
 
 
-// InputNames creates a vecotr of length ten to be used later.
+// InputNames creates a vector of length ten to be used later.
 
 void InputNames(vector<string>& names) {
 
@@ -20,6 +26,8 @@ void InputNames(vector<string>& names) {
 	}
 
 }
+
+//General 
 
 void PrintNames(vector<string> & names) {
 
@@ -36,13 +44,27 @@ void PrintNames(vector<string> & names) {
 
 }
 
+void alphabetize(vector<string>& names) {
+
+	vector<string> alphName;
+
+	InputNames(alphName);
+
+	sort(alphName.begin(), alphName.end());
+
+	for (int i = 0; i < alphName.size(); i++) {
+		cout << alphName.at(i) << " ";
+
+	}
+}
+
 int main() {
 
-	vector<string> vectorCopy;
+	vector<string> passPN;
 
+	alphabetize(passPN);
 	
-	
-	
+	return(0);
 
 }
 
