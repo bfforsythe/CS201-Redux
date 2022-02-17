@@ -27,7 +27,7 @@ void InputNames(vector<string>& names) {
 
 }
 
-//General 
+//General Function to print a Vector 
 
 void PrintNames(vector<string> & names) {
 
@@ -44,6 +44,8 @@ void PrintNames(vector<string> & names) {
 
 }
 
+// Alphabetizes the large vector using the std::sort function
+
 void alphabetize(vector<string>& names) {
 
 	vector<string> alphName;
@@ -57,6 +59,8 @@ void alphabetize(vector<string>& names) {
 
 	}
 }
+
+// Main function to test all functions
 
 int main() {
 
