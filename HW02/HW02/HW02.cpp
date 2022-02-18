@@ -193,6 +193,11 @@ int main() {
 
 //%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+//Brandon Forsythe
+//CS201 HW02 A3
+//2/15/22
+// grid.h & grid.cpp;
+
 #include "grid.h"
 
 		int main() {
@@ -200,3 +205,15 @@ int main() {
 			planeInit();
 
 		}
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+// Brandon Forsythe
+// CS201 HW02 A4
+// 217
+// 2/16/21
+
+		void vecNum(vector<string>& name, vector<string>& number) {
+
+
+}
