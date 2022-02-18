@@ -2,7 +2,7 @@
 
 void planeInit() {
 
-	int length, width = 0;
+	int length = 0, width = 0;
 	int total = (length * width);
 	int k = 0;
 
@@ -10,20 +10,14 @@ void planeInit() {
 	cout << "\n Please Enter Rows and Columns to Generate a field\n";
 	cin >> length >> width;
 
-	for (int j = 0; j != total; j++) {
+	for (int j = 0; j < width; j++) {
 
-		
+		for (int i = 0; i < length; i++) {
 
-		if (k == length) {
-			std::cout << "\n";
-			k = 0;
+			cout << " . ";
 		}
-
-		k++;
-		cout << " . ";
-
+		cout << "\n";
 	}
 
-	cout << "\n ";
 }
 
