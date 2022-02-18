@@ -215,7 +215,7 @@ int main() {
 
 		void vecNum(vector<string>& names, vector<int>& numbers) {
 
-			cout << "Please enter a Name, along with a Number ID: \n *Press Enter twice after you've entered all your names and numbers";
+			cout << "Please enter a Name, along with a Number ID: \n *Press Enter twice after you've entered all your names and numbers\n\n";
 			int number = 1;
 			string name;
 
@@ -248,8 +248,26 @@ int main() {
 
 			vector<string> names;
 			vector<int> numbers;
+			int searchAt;
 
 			vecNum(names, numbers);
 
+			cout << "Enter a number to search for: \n";
+			cin >> searchAt;
+			cout << " ";
+
+			if (searchAt >= names.size() + 1)
+				throw out_of_range("Does not Exist");
+
+			cout << "Your Returned Vector:Value pair Is: ";
+			cout << names.at(searchAt) << numbers.at(searchAt);
+			cout << "\n\n";
+
+			cout << "Names & Nums Total List \n\n";
+
+			for (int i = 0; i < names.size(); i++) {
+				cout << names.at(i) << " ";
+				cout << numbers.at(i) << "\n";
+			}
 
 		}
