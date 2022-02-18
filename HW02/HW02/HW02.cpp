@@ -199,5 +199,4 @@ int main() {
 
 			planeInit();
 
-
 		}
