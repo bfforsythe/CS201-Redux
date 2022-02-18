@@ -217,12 +217,27 @@ int main() {
 
 			cout << "Please enter a Name, along with a Number ID: \n *Press Enter twice after you've entered all your names and numbers";
 			int number = 1;
-			string name = " ";
+			string name;
 
 
-		while (!name.empty() && number != 0) {
-			getline(cin, name);
-			cin >> number;
+			while (name != "Quit") {
+
+
+
+				cout << "Name: ";
+				cin >> name;
+
+				if (name == "Quit") {
+					break;
+				}
+
+				cout << "\nNumber: ";
+				cin >> number;
+
+				if (number == 0) {
+					break;
+				}
+
 			names.push_back(name);
 			numbers.push_back(number);
 			}
