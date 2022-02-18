@@ -198,13 +198,13 @@ int main() {
 //2/15/22
 // grid.h & grid.cpp;
 
-#include "grid.h"
+/*#include "grid.h"
 
 		int main() {
 
 			planeInit();
 
-		}
+		} */
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -213,7 +213,28 @@ int main() {
 // 217
 // 2/16/21
 
-		void vecNum(vector<string>& name, vector<string>& number) {
+		void vecNum(vector<string>& names, vector<int>& numbers) {
+
+			cout << "Please enter a Name, along with a Number ID: \n *Press Enter twice after you've entered all your names and numbers";
+			int number = 1;
+			string name = " ";
 
 
+		while (!name.empty() && number != 0) {
+			getline(cin, name);
+			cin >> number;
+			names.push_back(name);
+			numbers.push_back(number);
+			}
 }
+
+
+		int main() {
+
+			vector<string> names;
+			vector<int> numbers;
+
+			vecNum(names, numbers);
+
+
+		}
