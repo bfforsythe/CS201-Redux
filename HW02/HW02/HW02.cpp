@@ -256,12 +256,10 @@ int main() {
 			cin >> searchAt;
 			cout << " ";
 
-			if (searchAt >= names.size() + 1)
-				throw out_of_range("Does not Exist");
 
-			cout << "Your Returned Vector:Value pair Is: ";
-			cout << names.at(searchAt) << numbers.at(searchAt);
-			cout << "\n\n";
+				cout << "Your Returned Vector:Value pair Is: ";
+				cout << names.at(searchAt) << numbers.at(searchAt);
+				cout << "\n\n";
 
 			cout << "Names & Nums Total List \n\n";
 
