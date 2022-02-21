@@ -14,8 +14,8 @@ using namespace std;
 
 
 // InputNames creates a vector of length ten to be used later.
-/*
-void InputNames(vector<string>& names) {
+
+/* void InputNames(vector<string>& names) {
 
 	for (int i = 0; i < 10; i++) {
 		cout << "Please Enter a Name: ";
@@ -68,34 +68,36 @@ int main() {
 	vector<string> passPN;
 
 	alphabetize(passPN);
-	
-	return(0);
 
-} */
+	// Name Search
 
-
-
-
-// Name Search
-
-/*cout << "Please enter a name to search for: ";
+cout << "Please enter a name to search for: ";
 string searchedName;
 getline(cin, searchedName);
 bool isNameHere = false;
 
-for (int parse = 0; parse < vectorCopy.size(); parse++) {
+for (int parse = 0; parse < passPN.size(); parse++) {
 
-	if (searchedName == vectorCopy.at(parse)) {
+	if (searchedName == passPN.at(parse)) {
 		cout << "Your query exists";
 		isNameHere = true;
-		parse = vectorCopy.size();
+		parse = passPN.size();
 	}
 
 }
 
 if (isNameHere == false) {
 	cout << "Your query does not exist";
-} */
+} 
+	
+	return(0); 
+
+}  */
+
+
+
+
+
 
 
 
@@ -268,4 +270,4 @@ int main() {
 				cout << numbers.at(i) << "\n";
 			}
 
-		}
+		} 
