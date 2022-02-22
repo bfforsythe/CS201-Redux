@@ -25,7 +25,7 @@ void boxDefine() {
 	// Top Row Handling
 
 	for (int layerTot = 0; layerTot < layers; layerTot++) {
-		
+
 		for (i = 0; i <= length; i++) {
 			cout << "*";
 
@@ -35,38 +35,22 @@ void boxDefine() {
 
 	// Middle Rows, and String output
 
-
-
-
-
-
-
-
-
 	/*for (int midRows = 0; midRows < 3; midRows++) {
 		for (int leftStar = 0; leftStar < layers; leftStar++) {
 			cout << "*";
 		}
-		for (int )
+		for (int spaces = 0; spaces < inside.size() + 2; spaces++) {
+			cout << " ";
+		}
+		for (int rightStar = 0; rightStar < layers; rightStar++) {
+			cout << "*";
+		}
 		cout << "\n";
 	}
-	
 } */
 
 
 
-
-/*	for (int i = 0; i < layers; i++) {
-		cout << "*";
-	}
-
-	for (int k = 0; k < inside.size() + 2; k++) {
-		cout << " ";
-	}
-
-	for (int j = 0; j < layers; j++) {
-		cout << "*";
-	}*/
 
 
 #endif // !boxer.h
