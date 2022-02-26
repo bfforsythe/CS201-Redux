@@ -32,20 +32,26 @@ void boxDefine() {
 		}
 		cout << "\n";
 	}
-	for (int midloop = 0; midloop < 2; midloop++) {
+
+	// Middle Rows, and String output
+
+	for (int midloop = 0; midloop < 3; midloop++) {
+
 
 		for (int k = 0; k < layers; k++) {
-			cout << "*";
-	}
-
-	for (int j = 0; j < inside.size() + 2; j++) {
+				cout << "*";
+			}
+		for (int j = 0; j < inside.size() + 2; j++) {
 		cout << " ";
 	}
+		for (int k = 0; k < layers; k++) {
+			cout << "*";
+		}
 	cout << "\n";
 
 
 }
-	// Middle Rows, and String output
+
 	
 	
 	
