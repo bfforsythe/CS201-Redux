@@ -37,6 +37,20 @@ void boxDefine() {
 
 	for (int midloop = 0; midloop < 3; midloop++) {
 
+		if (midloop == 1) {
+
+			for (int k = 0; k < layers; k++) {
+				cout << "*";
+			}
+			cout << " " << inside << " ";
+
+			for (int k = 0; k < layers; k++) {
+				cout << "*";
+			}
+			midloop++;
+			cout << "\n";
+
+		}
 
 		for (int k = 0; k < layers; k++) {
 				cout << "*";
@@ -51,7 +65,16 @@ void boxDefine() {
 
 
 }
+	//Bottom Handling
 
+	for (int layerTot = 0; layerTot < layers; layerTot++) {
+
+		for (i = 0; i <= length; i++) {
+			cout << "*";
+
+		}
+		cout << "\n";
+	}
 	
 	
 	
