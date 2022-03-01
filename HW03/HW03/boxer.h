@@ -11,7 +11,9 @@ using namespace std;
 void boxDefine() {
 	
 	int layers;
+	int positiveLayer;
 	string inside;
+	
 	int i;
 
 	cout << "Please enter the amount of layers you'd like inside of your box ";
@@ -20,16 +22,22 @@ void boxDefine() {
 	cout << "Please enter a string to go inside of your box ";
 	cin >> inside;
 
-	int length = inside.size() + 2 * (layers)+1;
+	
 
 	// Top Row Handling
 
 	while (inside != "Quit") {
 		if (layers < 0) {
-			cout << "The number you've entered is negative, try again";
+			cout << "The number you've entered is negative, try again\n";
+			cin >> layers;
+			
 		}
 		else {
-			for (int layerTot = 0; layerTot < layers; layerTot++) {
+
+			positiveLayer = layers;
+			int length = inside.size() + 2 * (layers)+1;
+
+			for (int layerTot = 0; layerTot < positiveLayer; layerTot++) {
 
 				for (i = 0; i <= length; i++) {
 					cout << "*";
@@ -81,7 +89,12 @@ void boxDefine() {
 				cout << "\n";
 			}
 		}
+
+		cout << "Please enter another number / string set to compute again: ";
+		cin >> layers;
+		cin >> inside;
 	}
+	
 }
 
 #endif // !boxer.h
