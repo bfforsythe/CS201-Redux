@@ -32,26 +32,37 @@ void computation() {
 	int collatzint;
 
 	cin >> collatzint;
+	
+
+	while (collatzint < 0) {
+		cout << "That's a negative number. Try again: ";
+		cin >> collatzint;
+
+	}
+
+	cout << collatzint << " ";
+
 
 		while (collatzint != 1) {
 
-		if (collatzint % 2 == 0) {
-			collatzint = collatzint / 2;
-		}
-		else {
-			collatzint = (3 * collatzint) + 1;
-		}
-		cout << collatzint << " ";
+			if (collatzint % 2 == 0) {
+				collatzint = collatzint / 2;
+			}
+			else {
+				collatzint = (3 * collatzint) + 1;
+			}
+			cout << collatzint << " ";
 
+		}
+		cout << endl;
 	}
-	cout << endl;
-}
+
 
 
 
 int main(int collatzint) {
 
-	cout << "Please enter a positive number to calculate the collatz formula";
+	cout << "Please enter a positive number to calculate the collatz formula ";
 
 
 	computation();
