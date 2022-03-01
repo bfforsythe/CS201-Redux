@@ -2,10 +2,7 @@
 //CS201-Redux HW03
 //2/21/22
 
-#include <iostream>
-#include<string>
-
-using namespace std;
+#include "std_lib_facilites.h"
 
 /* #include "boxer.h"
 
@@ -75,9 +72,9 @@ int main(int collatzint) {
 // 2/28/22
 
 
-#include "std_lib_facilites.h"
 
-int main() {
+
+/*int main() {
 	
 	printString("Hi!");
 
@@ -85,4 +82,9 @@ int main() {
 
 	cout << "Hello!\n";
 	keepWindowOpen();
-}
+} */
+
+
+// Brandon Forsythe
+//CS201-Redux HW03A3
+// 3/1/22
