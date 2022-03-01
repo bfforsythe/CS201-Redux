@@ -21,9 +21,28 @@ using std::string;
 using std::vector;
 
 
+// keepWindowOpen (Keeps window open)
+inline void keepWindowOpen() {
+	string exit;
+	cin.clear();
+	cout << "Press Enter to exit the program" << endl;
+	getline(cin, exit);
+}
+
+//printString (Function to print a complete string with newline) (Testing purposes?)
+
+inline void printString(string debuggy) {
+	cout << debuggy << "\n";
+}
 
 
+//Nuclear option (I cannot come up with anything else I need for the moment. This blows up.
 
+inline void nuke() {
+	for (int heatDeath = 0; heatDeath <= 1000; heatDeath++) {
+		cout << "Goodbye!";
+	}
+}
 
 #endif
 

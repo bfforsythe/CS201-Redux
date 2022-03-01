@@ -75,3 +75,14 @@ int main(int collatzint) {
 // 2/28/22
 
 
+#include "std_lib_facilites.h"
+
+int main() {
+	
+	printString("Hi!");
+
+	nuke();
+
+	cout << "Hello!\n";
+	keepWindowOpen();
+}
