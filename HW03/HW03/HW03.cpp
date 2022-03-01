@@ -27,7 +27,7 @@ int main() {
 // Formula ------ Even, n/2
 // Formula ------ Odd, 3n + 1
 
-void computation() {
+/*void computation() {
 
 	int collatzint;
 
@@ -66,6 +66,12 @@ int main(int collatzint) {
 
 
 	computation();
-}
+} */
+
+
+
+//Brandon Forsythe
+//CS201-Redux HW03A2
+// 2/28/22
 
 
