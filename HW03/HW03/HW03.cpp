@@ -90,7 +90,7 @@ int main(int collatzint) {
 // 3/1/22
 // Fixed Kelvin converter
 
-double ctok(double c) {
+/* double ctok(double c) {
 	int k = c + 273.15;
 	return k; // "return int", should be "return k"
 }
@@ -103,4 +103,37 @@ int main() {
 
 	double k = ctok(c); // "ctok("c"), is type char, not int.
 	cout << k << "\n"; // cout was capitalized, single quotes around new line, slash was the incorrect direction.
+} */
+
+//Brandon Forsythe
+//CS201-Redux HW03A4
+//3/2/22
+
+//Quadratic Formula calculator
+
+
+void quadratic(double a,double b,double c) {
+
+	double gatekeeper = sqrt(b * b - (4 * a * c));
+
+	while (gatekeeper < 0) {
+		cout << "Sorry this will error";
+	}
+
+	double quadSolvedpositive = (-b + gatekeeper) / (2 * a);
+	cout << "Your quadratic using the positive direction is: " << quadSolvedpositive << endl;
+	double quadSolvednegative = (-b - gatekeeper) / (2 * a);
+	cout << "Your quadratic using the negative direction is: " << quadSolvednegative << endl;
+
+}
+
+int main() {
+
+	cout << "Please enter three numbers to calculate the quadratic formula: ";
+
+	double a, b, c;
+
+	cin >> a >> b >> c;
+
+	quadratic(a,b,c);
 }
