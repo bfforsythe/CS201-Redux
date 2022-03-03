@@ -88,3 +88,19 @@ int main(int collatzint) {
 // Brandon Forsythe
 //CS201-Redux HW03A3
 // 3/1/22
+// Fixed Kelvin converter
+
+double ctok(double c) {
+	int k = c + 273.15;
+	return k; // "return int", should be "return k"
+}
+
+int main() {
+
+	double c = 0;
+	cout << "Enter a value to convert to Kelvin: "; // original code did not prompt user.
+	cin >> c; // "cin >> d", d does not exist.
+
+	double k = ctok(c); // "ctok("c"), is type char, not int.
+	cout << k << "\n"; // cout was capitalized, single quotes around new line, slash was the incorrect direction.
+}
