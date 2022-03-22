@@ -5,40 +5,42 @@
 #include "std_lib_facilites.h"
 
 bool ReadLine(string& str) {
+
 	getline(cin, str);
 
+	if (str.empty()) {
+		return (false);
+	}
+	else {
+		return(true);
+	}
+}
+
+
+unsigned StringtoTokenWS(string &input, vector<string> &tokens) {
+
+	getline(cin, input);
+
+	char c;
+	string s;
+
+
 
 	return(0);
+
 }
 
-unsigned StringtoTokenWS(const string& input) {
+void AnalyzeTokens(const vector<string>& tokens) {
 
-	ReadLine;
-
-
-	vector<string> tokens;
-
-	std::istringstream pieceMeal(input);
-	string str;
-
-	while (pieceMeal) {
-		pieceMeal >> str;
-
-		tokens.push_back(str);
-
+	while (splitInput) {
+		if (splitInput >> c) {
+			cout << "{Character}" << c << "\n";
+		}
+		else if (splitInput >> s) {
+			cout << "{String}" << s << "\n";
+		}
 	}
 
-	for (int i = 0; i < tokens.size() - 1; i++) {
-		cout << tokens.at(i) << " ";
-	}
 
-	return(0);
 }
-
-
-
-void AnalyzeTokens(const vector<string> tokens) {
-	vo
-}
-
 #endif
