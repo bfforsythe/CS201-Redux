@@ -17,22 +17,41 @@ bool ReadLine(string& str) {
 }
 
 
-unsigned StringtoTokenWS(string &input, vector<string> &tokens) {
+unsigned StringtoTokenWS() {
+
+	string input;
+	vector<string> tokens;
+
 
 	getline(cin, input);
+	std::istringstream splitInput(input);
 
-	char c;
-	string s;
+	string dummyInput;
 
+	while (splitInput >> dummyInput) {
+		tokens.push_back(dummyInput);
+	}
+
+	cout << tokens.size();
 
 
 	return(0);
 
 }
 
-void AnalyzeTokens(const vector<string>& tokens) {
+void AnalyzeTokens() {
 
-	while (splitInput) {
+	const vector<string> tokens;
+	string input;
+
+	StringtoTokenWS();
+
+	char c;
+	string s;
+
+	std::istringstream splitInput(input);
+
+	while (splitInput >> c >> s) {
 		if (splitInput >> c) {
 			cout << "{Character}" << c << "\n";
 		}
