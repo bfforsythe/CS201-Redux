@@ -4,58 +4,74 @@
 
 #include "std_lib_facilites.h"
 
+string i;
+int j;
 
 
-
-unsigned StringtoTokenWS() {
-
-	string input;
-	vector<string> tokens;
-
-	bool ReadLine;
-
-	if (input.empty()) {
-		ReadLine == false;
-	}
-	else {
-		ReadLine == true;
-	}
-
-	std::istringstream splitInput(input);
-
-	string dummyInput;
-
-	while (splitInput >> dummyInput) {
-		tokens.push_back(dummyInput);
-	}
-
-	cout << tokens.size();
-
-
-	return(0);
-
-}
+// Functionality for Sorting
 
 void AnalyzeTokens() {
 
+	vector<string> token;
+	for (int k = 0; k < token.size(); k++) {
 
-		const vector<string> tokens;
-		string input;
+		if (j) {
 
-		StringtoTokenWS();
+			cout << "[integer]";
 
-		char c;
-		string s;
+			k++;
 
-		std::istringstream splitInput(input);
-
-		while (splitInput >> c >> s) {
-			if (splitInput >> c) {
-				cout << "{Character}" << c << "\n";
-			}
-			else if (splitInput >> s) {
-				cout << "{String}" << s << "\n";
-			}
 		}
+
+		else if (i = "1", "2", "3", "4", "5", "6", "7", "8", "9") {
+
+			cout << "[string]";
+
+			k++;
+
+		}
+
+		else if (i == " ") {
+
+			cout << "[whitespace]";
+
+		}
+
+		else {
+
+			cout << "[unknown]";
+
+			k++;
+
+		}
+
 	}
+
+}
+
+void parse() {
+	unsigned StringtoToken();
+
+	vector<string> token;
+	string str;
+
+	std::istringstream input(str);
+
+	while (input) {
+
+		input >> i;
+
+		token.push_back(i);
+
+	}
+
+	for (int k = 0; k < token.size() - 1; k++) {
+		AnalyzeTokens();
+		cout << " " << token.at(k) << endl;
+
+	}
+
+	cout << "Number of Tokens are: " << token.size() - 1;
+
+}
 #endif
