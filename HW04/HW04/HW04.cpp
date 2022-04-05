@@ -33,7 +33,7 @@ int main() {
 
 	// RNG 
 
-	srand(time(0));
+	srand((unsigned int)time(0));
 
 	for (int i = 0; i < 4; i++) {
 		indAns = rand() % 10;
@@ -61,6 +61,8 @@ int main() {
 		vector<int> guessVec{ guess1, guess2, guess3, guess4 };
 
 
+		// Negative Answer Handling
+
 		if (guess1 < 0 || guess2 < 0 || guess3 < 0 || guess4 < 0) {
 			cout << "Answer: ";
 			for (int ans = 0; ans < answer.size(); ans++) {
@@ -71,12 +73,9 @@ int main() {
 
 		// Bull Handling
 
-		for (int i = 0; i < guessVec.size(); i++) {
+		for (int i = 0; i < answer.size(); i++) {
 			if (guessVec.at(i) == answer.at(i)) {
 				bulls++;
-			}
-			else {
-				bulls = 0;
 			}
 		}
 		cout << "Bulls: " << bulls << "\n";
@@ -85,8 +84,11 @@ int main() {
 			cout << "You Win!";
 			return(0);
 		}
+		else {
+			bulls = 0;
+		}
 
-		// Negative Answer Handling
+
 
 
 
