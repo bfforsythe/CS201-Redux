@@ -3,17 +3,17 @@
 #ifndef std_lib_facilites.h
 
 #include<iostream>
-#include <iomanip>
+#include<iomanip>
 #include<sstream>
 #include<fstream>
 #include<string>
-#include <vector>
-#include <map>
-#include <cstdio>
-#include <cstdlib>
-#include <cmath>
-#include <random>
-#include <sstream>
+#include<vector>
+#include<map>
+#include<cstdio>
+#include<cstdlib>
+#include<cmath>
+#include<random>
+#include<sstream>
 
 using std::cout;
 using std::cin;
