@@ -4,74 +4,85 @@
 
 #include "std_lib_facilites.h"
 
-string i;
-int j;
-
-
 // Functionality for Sorting
+
+
+bool isNumber(const string& str)
+{
+    return str.find_first_not_of("0123456789") == string::npos;
+}
 
 void AnalyzeTokens() {
 
-	vector<string> token;
-	for (int k = 0; k < token.size(); k++) {
+    vector<string> token;
+    string str;
+    while (str != "END") {
 
-		if (j) {
+    getline(cin, str);
 
-			cout << "[integer]";
+    std::istringstream input(str);
 
-			k++;
 
-		}
 
-		else if (i = "1", "2", "3", "4", "5", "6", "7", "8", "9") {
+        while (input >> str) {
 
-			cout << "[string]";
+            token.push_back(str);
 
-			k++;
 
-		}
+        }
+        token.push_back(" ");
+    }
 
-		else if (i == " ") {
+    for (int i = 0; i < token.size(); i++) {
 
-			cout << "[whitespace]";
+        if (token.at(i) == "+" || token.at(i) == "-" || token.at(i) == "*" ||
+            token.at(i) == "/" || token.at(i) == "," || token.at(i) == ";" || token.at(i) == ">" ||
+            token.at(i) == "<" || token.at(i) == "=" || token.at(i) == "(" || token.at(i) == ")" ||
+            token.at(i) == "[" || token.at(i) == "]" || token.at(i) == "{" || token.at(i) == "}") {
+            cout << "{Special Character} " << token.at(i) << "\n";
+        }
 
-		}
+        //**************************************************************************************************
 
-		else {
+        else if (token.at(i) == "+" || token.at(i) == "-" || token.at(i) == "*" ||
+            token.at(i) == "/" || token.at(i) == ">" || token.at(i) == "<" ||
+            token.at(i) == "==") {
+            cout << "{Special Character} " << token.at(i) << "\n";
+        }
 
-			cout << "[unknown]";
+        // ************************************************************************************************
 
-			k++;
 
-		}
 
-	}
+        else if (isNumber(token.at(i))) {
+            cout << "{Integer} " << token.at(i) << "\n";
 
+        }
+
+
+      /*  else if (token.at(i) == "0" || token.at(i) == "1" || token.at(i) == "2" ||
+            token.at(i) == "3" || token.at(i) == "4" || token.at(i) == "5" ||
+            token.at(i) == "6" || token.at(i) == "7" || token.at(i) == "8" ||
+            token.at(i) == "9") {
+            cout << "{Integer} " << token.at(i) << "\n";
+        } */
+
+        //************************************************************************************************
+        
+        else if (token.at(i) == " ") {
+            cout << "{Whitespace} " << token.at(i) << "\n";
+        }
+
+        else {
+            cout << "{String} " << token.at(i) << "\n";
+        }
+
+
+
+    }
+  
 }
 
-void parse() {
-	unsigned StringtoToken();
 
-	vector<string> token;
-	string str;
 
-	std::istringstream input(str);
-
-	while (input) {
-
-		input >> i;
-
-		token.push_back(i);
-
-	}
-
-	for (int k = 0; k < token.size() - 1; k++) {
-		AnalyzeTokens();
-		cout << " " << token.at(k) << endl;
-
-	}
-
-	cout << "Number of Tokens are: " << token.size() - 1;
-
-}
 #endif

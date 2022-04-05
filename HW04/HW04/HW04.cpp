@@ -10,25 +10,6 @@
 
 int main() {
 
+	AnalyzeTokens();
 
-
-	bool ReadLine(string & str);
-
-	string str;
-
-		getline(cin, str);
-
-
-		if (str.empty()) {
-
-			cout << "Nothing Was Entered";
-
-		}
-
-		else {
-
-			parse();
-
-
-		}
-	}
+}
