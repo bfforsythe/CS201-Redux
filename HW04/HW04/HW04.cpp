@@ -22,7 +22,7 @@ int main() {
 //*****************************************************************HW04 A1
 
 
-#include<stdlib.h>
+/* #include<stdlib.h>
 
 int main() {
 	vector<int> answer;
@@ -52,6 +52,7 @@ int main() {
 	int cows = 0;
 
 	cout << "Please Guess the Bull/Cow combination: ";
+
 
 
 
@@ -88,10 +89,97 @@ int main() {
 			bulls = 0;
 		}
 
+		// Cow Handling
+
+
+		for (int i = 0; i < answer.size(); i++) {
+			if (guessVec.at(i) == answer[0] ||
+				guessVec.at(i) == answer[1] ||
+				guessVec.at(i) == answer[2] ||
+				guessVec.at(i) == answer[3]) {
+				
+				cows++;
+			}
+		}
+		cout << "Cows: " << cows << "\n";
+		cows = 0;
 
 
 
 
 
 	}
+} */
+
+
+// ************************************************************************** HW04 A2
+
+
+// FIFO
+
+
+void FifoPush(vector<string>& container, string item) {
+
+	container.push_back(item);
+	}
+
+void FifoPop(vector<string>& container) {
+
+	string item;
+	FifoPush(container, item);
+	cout << "FIFO >> ";
+	for (int i = 0; i < container.size(); i++) {
+		cout << container.at(i) << " ";
+	}
+
+
 }
+
+// LIFO
+
+void LifoPush(vector<string>& lcontainer, string item) {
+
+	lcontainer.push_back(item);
+}
+
+void LifoPop(vector<string>& lcontainer) {
+
+	string item;
+	LifoPush(lcontainer, item);
+	cout << "LIFO >> ";
+	for (int i = lcontainer.size() - 1; i >= 0; i--) {
+		cout << lcontainer[i] << " ";
+	}
+}
+
+
+int main() {
+	cout << "|| Welcome to the marginally entertaining display of vectors being funky || \n";
+
+	vector<string> container;
+	vector<string> lcontainer;
+
+
+	FifoPush(container, "a");
+	FifoPush(container, "b");
+	FifoPush(container, "c");
+	FifoPush(container, "d");
+	FifoPush(container, "e");
+	FifoPush(container, "f");
+	FifoPush(container, "g");
+
+	FifoPop(container);
+	cout << std::endl;
+
+	LifoPush(lcontainer, "a");
+	LifoPush(lcontainer, "b");
+	LifoPush(lcontainer, "c");
+	LifoPush(lcontainer, "d");
+	LifoPush(lcontainer, "e");
+	LifoPush(lcontainer, "f");
+	LifoPush(lcontainer, "g");
+
+	LifoPop(lcontainer);
+
+}
+
