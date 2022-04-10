@@ -99,9 +99,11 @@ int main()
 } */
 
 
-// ************************************* HW06 A2 Hangman
+// ************************************* HW06 A1 Hangman
 
 #include "std_lib_facilites.h"
+
+
 #include <algorithm>
 
 
@@ -147,6 +149,7 @@ int main() {
 		for (int i = 0; i < ansVec.size(); i++) {
 			if (letterGuess == ansVec.at(i)) {
 				savedVec[i] = letterGuess;
+				gameOver--;
 			}
 			cout << savedVec.at(i);
 			cout << " ";
@@ -159,4 +162,23 @@ int main() {
 	
 
 
+} 
+
+
+
+// ****************************************************** HW06 A2
+
+
+/*struct Record {
+	double unitPrice;
+	int units;
+} ;
+
+
+int main() {
+	std::map <string, Record> Catalogue;
+
+		Catalogue[0] = {"Clothes", 3.00, 1};
 }
+
+*/
