@@ -1,4 +1,4 @@
-#include <iostream>
+/* #include <iostream>
 #include <iomanip>
 #include <string>
 #include <map>
@@ -86,7 +86,7 @@ void randomBetween() {
 	std::cout << "Normal distribution around " << rando << ":\n";
 	for (auto p : hist) {
 		std::cout << std::fixed << std::setprecision(1) << std::setw(2)
-			<< p.first << ' ' << std::string(p.second / 200, '*') << '\n';
+			<< p.first << ' ' << std::string(p.second / 200 , '*') << '\n';
 	}
 }
 
@@ -96,4 +96,52 @@ int main()
 	randomBetweenU();
 	randomBetweenN();
 	randomBetween();
+} */
+
+
+// ************************************* HW06 A2 Hangman
+
+#include "std_lib_facilites.h"
+#include <algorithm>
+
+int main() {
+
+	std::map<int, string> words;
+
+	words.insert(std::pair<int, string>(0, "Sweater"));
+	words.insert(std::pair<int,string>(1,"Notebook"));
+	words.insert(std::pair<int, string>(2, "River"));
+	words.insert(std::pair<int, string>(3, "Ocean"));
+	words.insert(std::pair<int, string>(4, "Hydrant"));
+	words.insert(std::pair<int, string>(5, "Streetlight"));
+
+	// Pulls a random word out of the map above
+
+	srand(time(0));
+	
+	int wordPicker = rand() % 5;
+	string guessed = words.at(wordPicker);
+
+	// Creates a vector that splits string into chars
+
+	vector<char> guessChar(guessed.begin(), guessed.end());
+
+	// Guesser Handling
+
+	char letterGuess = 'a';
+	vector<char>guessVec;
+	
+
+	while (letterGuess != '0') {
+		cin >> letterGuess;
+		guessVec.push_back(letterGuess);
+	}
+	guessVec.pop_back();
+
+	// Checking
+
+	bool isSame = guessVec == guessChar;
+
+	std::for_each(guessChar.begin(), guessChar.end(), isSame);
+
 }
