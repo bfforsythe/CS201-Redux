@@ -104,16 +104,17 @@ int main()
 #include "std_lib_facilites.h"
 #include <algorithm>
 
+
 int main() {
 
 	std::map<int, string> words;
 
-	words.insert(std::pair<int, string>(0, "Sweater"));
-	words.insert(std::pair<int,string>(1,"Notebook"));
-	words.insert(std::pair<int, string>(2, "River"));
-	words.insert(std::pair<int, string>(3, "Ocean"));
-	words.insert(std::pair<int, string>(4, "Hydrant"));
-	words.insert(std::pair<int, string>(5, "Streetlight"));
+	words.insert(std::pair<int, string>(0, "sweaty"));
+	words.insert(std::pair<int,string>(1,"crispy"));
+	words.insert(std::pair<int, string>(2, "splint"));
+	words.insert(std::pair<int, string>(3, "ocean"));
+	words.insert(std::pair<int, string>(4, "hydrant"));
+	words.insert(std::pair<int, string>(5, "hamburg"));
 
 	// Pulls a random word out of the map above
 
@@ -124,24 +125,38 @@ int main() {
 
 	// Creates a vector that splits string into chars
 
-	vector<char> guessChar(guessed.begin(), guessed.end());
+	vector<char> ansVec(guessed.begin(), guessed.end());
 
-	// Guesser Handling
-
-	char letterGuess = 'a';
-	vector<char>guessVec;
-	
-
-	while (letterGuess != '0') {
-		cin >> letterGuess;
-		guessVec.push_back(letterGuess);
-	}
-	guessVec.pop_back();
 
 	// Checking
+	
+	vector<char> savedVec;
+	int gameOver = 0;
 
-	bool isSame = guessVec == guessChar;
+	for (int i = 0; i < ansVec.size(); i++) {
+		savedVec.push_back('_');
+	}
 
-	std::for_each(guessChar.begin(), guessChar.end(), isSame);
+	cout << ansVec.size();
+
+	while (savedVec != ansVec && gameOver != 10) {
+
+		char letterGuess;
+		cin >> letterGuess;
+
+		for (int i = 0; i < ansVec.size(); i++) {
+			if (letterGuess == ansVec.at(i)) {
+				savedVec[i] = letterGuess;
+			}
+			cout << savedVec.at(i);
+			cout << " ";
+		}
+		gameOver++;
+	}
+
+	cout << "\n The answer was: " << guessed;
+
+	
+
 
 }
