@@ -14,6 +14,7 @@
 #include<cmath>
 #include<random>
 #include<sstream>
+#include <numeric>
 
 using std::cout;
 using std::cin;

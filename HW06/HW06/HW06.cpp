@@ -101,6 +101,7 @@ int main()
 
 // ************************************* HW06 A1 Hangman
 
+/*
 #include "std_lib_facilites.h"
 
 
@@ -163,22 +164,69 @@ int main() {
 
 
 } 
-
+*/
 
 
 // ****************************************************** HW06 A2
 
+#include "std_lib_facilites.h"
+#include <numeric>
 
-/*struct Record {
+
+struct Record {
 	double unitPrice;
 	int units;
-} ;
+};
+
+Record records;
 
 
 int main() {
+
+
+
+
 	std::map <string, Record> Catalogue;
 
-		Catalogue[0] = {"Clothes", 3.00, 1};
+		Catalogue["Cheese"] = {3.00,1};
+		Catalogue["Big Cheese"] = {9.00, 1};
+		Catalogue["Shrimp"] = {6.99, 1};
+		Catalogue["Lobster"] = { 18.75, 1};
+		Catalogue["Greened Beans"] = { 5.20, 1};
+
+		cout << "Welcome to the Market! ";
+		cout << "\n\n Our Selection is:\n";
+		
+		for (auto& t : Catalogue) {
+			cout << t.first << " " 
+				<< std::fixed 
+				<< std::showpoint 
+				<< std::setprecision(2)
+				<< t.second.unitPrice << " "
+				<< t.second.units << "\n";
+		}
+
+		cout << "Please Choose your Ingredients, then type 'Check Out' to Total: ";
+		
+		string choice;
+		vector<string> item;
+		vector<float> prices;
+		while (choice != "Check Out") {
+			
+			getline(cin, choice);
+			item.push_back(choice);
+		}
+
+		for (int i = 0; i < item.size(); i++) {
+
+			for (auto t : Catalogue) {
+				if (item.at(i) == t.first) {
+					prices.push_back(t.second.unitPrice);
+				}
+			}
+		}
+
+		float sum = std::accumulate(prices.begin(), prices.end(), 0.0);
+		cout << sum;
 }
 
-*/
