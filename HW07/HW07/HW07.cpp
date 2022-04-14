@@ -79,7 +79,7 @@ int main(void)
 
 
 //**************************************************************** HW07 A1
-
+/*
 #include "CImg.h"
 #include <fstream>
 #include <cstdio>
@@ -114,7 +114,54 @@ int main(void)
     img.display();
 
     return 0;
-}
+} */
 
 
 //******************************************************************** HW 07 A3
+
+// Caesar Cipher
+
+void cipher(int steps) {
+
+    string input;
+    int stepsRemaining = 0;
+    
+
+    while (input != "END") {
+        getline(cin, input);
+ 
+        for (int i = 0; i < input.size(); i++) {
+            char indvLetter;
+
+            indvLetter = input.at(i);
+            
+
+            if (indvLetter >= 'A' && indvLetter <='z' ) {
+
+                if (indvLetter >= 'x') {
+                    indvLetter = indvLetter -26;
+                }
+                indvLetter = indvLetter + steps;
+                cout << indvLetter;
+            }
+            else {
+                cout << indvLetter;
+            }
+            
+
+        }
+
+    }
+
+}
+
+int main() {
+
+    cout << " ! Cesar Cipher ! " << endl;
+
+    cout << " Please enter a string to cipherize: ";
+    // int inside cipher() gives number of steps.
+
+    cipher(3);
+
+}
