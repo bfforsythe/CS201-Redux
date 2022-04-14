@@ -1,5 +1,5 @@
 #include "std_lib_facilites.h"
-#include "CImg.h"
+/* #include "CImg.h"
 #include <fstream>
 #include <cstdio>
 // **************************************** HW07
@@ -28,7 +28,7 @@ CImg<> rgb2gray(CImg<> color)
         int G = (int)color(x, y, 0, 1);
         int B = (int)color(x, y, 0, 2);
 
-        int gray_val = (int)(0.299 * R + 0.587 * G + 0.114 * B);
+        int gray_val = (int)(0.2126 * R + 0.7152 * G + 0.0722 * B);
         gray_img(x, y, 0, 0) = gray_val;
     }
     return gray_img;
@@ -75,5 +75,46 @@ int main(void)
 
     return 0;
 
+} */
+
+
+//**************************************************************** HW07 A1
+
+#include "CImg.h"
+#include <fstream>
+#include <cstdio>
+
+using namespace cimg_library;
+
+CImg<> rgb2gray(CImg<> color)
+{
+    CImg<> gray_img(color.width(), color.height(), 1, 1, 0);
+
+    cimg_forXY(color, x, y) {
+        // Triple Channel
+
+        int R = (int)color(x, y, 0, 0);
+        int G = (int)color(x, y, 0, 1);
+        int B = (int)color(x, y, 0, 2);
+
+        int gray_val = (int)(0.2126 * R + 0.7152 * G + 0.0722 * B);
+        gray_img(x, y, 0, 0) = gray_val;
+    }
+    return gray_img;
 }
 
+int main(void)
+{
+
+
+    // Init images
+    CImg<> img("parrot.bmp");
+
+    img = rgb2gray(img);
+    img.display();
+
+    return 0;
+}
+
+
+//******************************************************************** HW 07 A3
