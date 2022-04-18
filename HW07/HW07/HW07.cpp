@@ -79,7 +79,7 @@ int main(void)
 
 
 //**************************************************************** HW07 A1
-/*
+
 #include "CImg.h"
 #include <fstream>
 #include <cstdio>
@@ -108,20 +108,20 @@ int main(void)
 
 
     // Init images
-    CImg<> img("parrot.bmp");
+    CImg<> img("56C91C1B-901C-4BA5-9CE2-C55A4F29CF4B.bmp");
 
     img = rgb2gray(img);
     img.display();
 
     return 0;
-} */
+} 
 
 
 //******************************************************************** HW 07 A3
 
 // Caesar Cipher
 
-void cipher(int steps) {
+/*void cipher(int steps) {
 
     string input;
     int stepsRemaining = 0;
@@ -164,4 +164,4 @@ int main() {
 
     cipher(3);
 
-}
+} */
