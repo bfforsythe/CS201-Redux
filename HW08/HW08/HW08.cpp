@@ -50,7 +50,7 @@ int main()
 //*********************************************************** HW02 A1
 
 
-class ppm {
+/*class ppm {
 
 public:
 
@@ -92,4 +92,5 @@ int main()
     grayImg.save("parrot.pgm");
 
 
-}
+} */
+
