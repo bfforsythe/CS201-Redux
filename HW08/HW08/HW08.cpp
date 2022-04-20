@@ -47,7 +47,7 @@ int main()
 
 } */
 
-//*********************************************************** HW02 A1
+//*********************************************************** HW08 A1
 
 
 /*class ppm {
@@ -93,4 +93,97 @@ int main()
 
 
 } */
+
+// ***************************************************** HW08 A2
+
+
+#include <algorithm>
+
+
+int main() {
+
+	
+    unsigned int w = 960;
+    unsigned int h = 540;
+
+    char black[] = { 0,0,0 };
+
+    CImg<unsigned char> hangman(w, h, 1, 3, 255);
+   
+    for (int i = 290; i <= 681; i++) {
+        hangman.draw_point(i,300, black);
+        hangman.draw_point(597 - i / 5, 100, black);
+    }
+    for (int j = 300; j >= 100; j--) {
+        hangman.draw_point(539, j, black);
+    }
+    
+    CImgDisplay hdisp(w, h, "Hangman", 0);
+
+    hdisp.display(hangman);
+
+    std::map<int, string> words;
+
+	words.insert(std::pair<int, string>(0, "sweaty"));
+	words.insert(std::pair<int, string>(1, "crispy"));
+	words.insert(std::pair<int, string>(2, "splint"));
+	words.insert(std::pair<int, string>(3, "ocean"));
+	words.insert(std::pair<int, string>(4, "hydrant"));
+	words.insert(std::pair<int, string>(5, "hamburg"));
+
+	// Pulls a random word out of the map above
+
+	srand(time(0));
+
+	int wordPicker = rand() % 5;
+	string guessed = words.at(wordPicker);
+
+	// Creates a vector that splits string into chars
+
+	vector<char> ansVec(guessed.begin(), guessed.end());
+
+
+	// Checking
+
+	vector<char> savedVec;
+	int gameOver = 0;
+    
+
+	for (int i = 0; i < ansVec.size(); i++) {
+		savedVec.push_back('_');
+	}
+
+	cout << ansVec.size();
+
+	while (savedVec != ansVec && gameOver != 10) {
+
+        bool doesntExist = false;
+
+		char letterGuess;
+		cin >> letterGuess;
+
+        for (int i = 0; i < ansVec.size(); i++) {
+            if (letterGuess == ansVec.at(i)) {
+                savedVec[i] = letterGuess;
+                doesntExist = true;
+            }
+            cout << savedVec.at(i);
+            cout << " ";
+        }
+
+        if (!doesntExist) {
+            gameOver++;
+        }
+        switch (gameOver) {
+        case 1:
+            hangman.draw_circle(w / 2, 100, 10, black);
+            hdisp.display(hangman);
+            break;
+        }
+	}
+
+	cout << "\n The answer was: " << guessed;
+
+
+}
 
