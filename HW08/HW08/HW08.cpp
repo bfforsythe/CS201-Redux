@@ -156,7 +156,7 @@ int main() {
 		savedVec.push_back('_');
 	}
 
-	cout << ansVec.size();
+	cout << ansVec.size() << " Letters: ";
 
 	while (savedVec != ansVec && gameOver != 6) {
 
@@ -221,6 +221,7 @@ int main() {
             hdisp.wait(1000);
             break;
         }
+        cout << "Guesses Remaining: " << 6 - gameOver << endl;
 	}
 
 	cout << "\n The answer was: " << guessed;
