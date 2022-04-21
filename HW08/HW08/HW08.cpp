@@ -114,10 +114,13 @@ int main() {
         hangman.draw_point(i,300, black);
         hangman.draw_point(597 - i / 5, 100, black);
     }
-    for (int j = 300; j >= 100; j--) {
+    for (int j = 100; j <= 300; j++) {
         hangman.draw_point(539, j, black);
+        hangman.draw_point(460, 160 - j/ 5, black);
+
     }
     
+    //hangman.display();
     CImgDisplay hdisp(w, h, "Hangman", 0);
 
     hdisp.display(hangman);
@@ -155,7 +158,7 @@ int main() {
 
 	cout << ansVec.size();
 
-	while (savedVec != ansVec && gameOver != 10) {
+	while (savedVec != ansVec && gameOver != 6) {
 
         bool doesntExist = false;
 
@@ -176,8 +179,46 @@ int main() {
         }
         switch (gameOver) {
         case 1:
-            hangman.draw_circle(w / 2, 100, 10, black);
+            hangman.draw_circle(460, 150, 10, black);
             hdisp.display(hangman);
+            break; 
+            
+        case 2:
+            for (int i = 139; i <= 180; i++) {
+                hangman.draw_point(460, i, black);
+            }
+            hdisp.display(hangman);
+            break;
+        case 3:
+            for (int i = 450; i < 460; i++) {
+                hangman.draw_point(i, 165, black);
+            }
+            hdisp.display(hangman);
+            break;         
+        case 4:
+            for (int i = 460; i < 470; i++) {
+                hangman.draw_point(i, 165, black);
+            }
+            hdisp.display(hangman);
+            break;
+        case 5:
+            hangman.draw_point(460, 180,black);
+            hangman.draw_point(459, 181, black);
+            hangman.draw_point(458, 182, black);
+            hangman.draw_point(457, 183, black);
+            hangman.draw_point(456, 184, black);
+            hangman.draw_point(455, 185, black);
+            hdisp.display(hangman);
+            break;
+        case 6:
+            hangman.draw_point(461, 180, black);
+            hangman.draw_point(462, 181, black);
+            hangman.draw_point(463, 182, black);
+            hangman.draw_point(464, 183, black);
+            hangman.draw_point(465, 184, black);
+            hangman.draw_point(466, 185, black);
+            hdisp.display(hangman);
+            hdisp.wait(1000);
             break;
         }
 	}
