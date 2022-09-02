@@ -63,7 +63,7 @@ int main(int collatzint) {
 
 
 	computation();
-} */
+} 
 
 
 
@@ -111,14 +111,10 @@ int main() {
 
 //Quadratic Formula calculator
 
-
 void quadratic(double a,double b,double c) {
 
-	double gatekeeper = sqrt(b * b - (4 * a * c));
-
-	while (gatekeeper < 0) {
-		cout << "Sorry this will error";
-	}
+	double gatekeeper = sqrt((b * b) - (4 * a * c));
+	cout << gatekeeper;
 
 	double quadSolvedpositive = (-b + gatekeeper) / (2 * a);
 	cout << "Your quadratic using the positive direction is: " << quadSolvedpositive << endl;
